@@ -7,12 +7,22 @@
     font-weight: 400;
     font-style: normal;
 }
+
+/* Font name: monsieur-la-doulaise */
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
   
 /* Shared Styles */
 .display-flex{
     display: flex;
 }
-
+.display-grid{
+    display: grid;
+}
 .primary-bg-color{
     background-color: #E6533C;
 }
@@ -24,6 +34,14 @@
 
 .text-color-2{
     color: #E6533C;
+}
+
+.primary-description-color{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.secondary-description-color{
+    color: rgba(239, 237, 232, 0.65);
 }
 
 /* Styles applied on whole site */
@@ -59,7 +77,7 @@ body{
 
 .fa-bars{
     color: white;
-    display: none;
+    visibility: hidden;
 }
 
 .nav-link{
@@ -73,11 +91,91 @@ body{
     border-radius: 46px;
 }
 
+/* Banner related styles */
+.banner{
+    justify-content: space-between;
+}
+
+.banner-title{
+    font-size: 4.9rem;
+}
+
+.banner-content{
+    max-width: 50%;
+}
+
+.banner-btn, .banner-btn-2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 42px;
+}
+
+.banner-btn{
+    border: none;
+    padding: 16px 46.5px;
+    margin-right: 14px;   
+}
+
+.banner-btn-2{
+    background: none;
+    border: 1px solid white;
+    padding: 16px 48px;
+}
+
+/* Banner-Card and img related styles */
+.banner-img{
+    position: relative;
+}
+
+.card-1, .card-2{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.card-1{
+    max-width: 40%;   
+    padding: 20px 23px;
+    position: absolute;
+    left: -7rem;
+    bottom: 12rem;
+}
+
+.fa-circle{
+    font-size: 2rem;
+    width: 40px;
+}
+
+.card-info{
+    align-items: center;
+    gap: 12px;
+}
+
+.card-title, .card-description, .card-2-title{
+    margin: 0;
+}
+
+.card-description{
+    white-space: nowrap;
+}
+
+.card-2{
+    max-width: 45%;
+    padding: 17px 24px;
+    position: relative;
+    left: 14rem;
+    bottom: 30rem;
+}
+
+.card-2-title{
+    font-size: 2.5rem;
+}
+
+
 /* media queries related styles for small devices */
 @media screen and (max-width: 576px) 
 {
-    .navbar{
-        margin: 20px;
+    header{
+        margin: 0 20px
     }
 
     .nav-items{
@@ -86,6 +184,34 @@ body{
 
     .fa-bars{
         font-size: 2.25rem;
-        display: contents;
+        visibility: visible;
+    }
+    .banner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-content{
+        max-width: 100%;
+    }
+    .banner-btns{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-wrap: nowrap;
+    }
+    .banner-btn{
+        padding: 16px 40px;
+    }
+    .banner-btn-2{
+        padding: 16px 20.5px;
+    }
+    .card-1{
+        left: 1rem;
+        bottom: 21rem;
+        padding: 15px 17px;
+    }
+    .card-2{
+        left: 11.5rem;
+        bottom: 33rem;
+        padding: 12px 18px;
     }
 }
