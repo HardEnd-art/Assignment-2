@@ -226,37 +226,42 @@ body{
 table, th, td{
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-collapse: collapse;
-    padding: 12px 15px;
+    padding: 12px 18px;
     text-align: left;
 }
 
 /* BMI calc related styles */
-.bmi-calculator{
-    background-color: #222222;
-    justify-content: center;
-}
-
-.bmi-calc{
-    max-width: 577px;
-}
-
 .bmi-container{
     justify-content: space-between;
-    align-items: center;
+    background-color: #222222;
+    padding: 52px;
 }
 
-input, .selector-1, .selector-2{
-    display: inline-block;
-    height: 48px;
-    width: 282.5px;
-    border: none;
-    border-radius: 10px;
-    gap: 12px;
-    padding: 13px 20px;
+.bmi-table{
+    padding: 52px;
+    max-width: 100%;
 }
 
-input, .selector-1, .selector-2{
+form{
+    width: 577px;
+    padding: 52px;
+}
+
+form > input, select{
     background-color: rgba(255, 255, 255, 0.1);
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    color:  rgba(255, 255, 255, 0.1);
+    margin: 12px;
+}
+
+.option-1{
+    width: 36%;
+}
+
+.option-2{
+    width: 78%;
 }
 
 /* Trainer related styles */
@@ -294,6 +299,7 @@ input, .selector-1, .selector-2{
     position: absolute;
     bottom: 0;
 }
+
 
 /* Footer related styles */
 footer{
@@ -343,29 +349,39 @@ hr{
         font-size: 2.25rem;
         visibility: visible;
     }
+    .banner{
+        margin-top: 0;
+    }
+
     .banner, .extra-achievement{
         flex-direction: column;
         align-items: center;
     }
+
     .banner-content{
         max-width: 100%;
     }
+
     .banner-btns{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-wrap: nowrap;
     }
+
     .banner-btn{
         padding: 16px 40px;
     }
+
     .banner-btn-2{
         padding: 16px 20.5px;
     }
+
     .card-1{
         left: 1rem;
         bottom: 21rem;
         padding: 15px 17px;
     }
+
     .card-2{
         left: 11.5rem;
         bottom: 33rem;
@@ -376,9 +392,11 @@ hr{
     .habits, .section-title{
         margin-top: 0;
     }
+
     .habits{
         margin: 0 28 0 28;
     }
+
      .habit-content{
         grid-template-columns: 1fr;
      }
@@ -387,6 +405,7 @@ hr{
     .extra-achievement{
         gap: 30px;
     } 
+
      .btn-position{
         text-align: center;
      }
@@ -400,14 +419,42 @@ hr{
         padding: 16px 103px;
      }
 
+     /* BMI Calculator-Section */
+     .bmi-table{
+        padding: 45px;
+     }
+
+     .bmi-container {
+        text-align: center;
+        flex-direction: column;
+        padding: 5px; 
+    }
+
+    form {
+        width: 100%;   
+        padding: 5px;
+        margin: 0 auto; 
+    }
+
+    form > input, select {
+        width: 25%;   
+    }
+
+    .btn-3 {
+        padding: 16px 70px;
+        margin-bottom: 43px; 
+    }
+    
      /* Trainer Section related styles */
      .trainers-content{
         grid-template-columns: 1fr;
      }
+
      .team-head-content{
         margin-top: 66px;
         margin-bottom: 37px;
      }
+
      .trainer-img{
         width: 100%;
         height: auto;
@@ -419,10 +466,13 @@ hr{
         gap: 20px;
         padding: 44px 20px;
      }
+
      .footer-links{
         margin-left: 0;
      }
+
      hr{
         width: 94%;
      }
+
 }
