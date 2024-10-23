@@ -20,9 +20,11 @@
 .display-flex{
     display: flex;
 }
+
 .display-grid{
     display: grid;
 }
+
 .primary-bg-color{
     background-color: #E6533C;
 }
@@ -42,6 +44,10 @@
 
 .secondary-description-color{
     color: rgba(239, 237, 232, 0.65);
+}
+
+section{
+    margin-top: 100px;
 }
 
 /* Styles applied on whole site */
@@ -104,7 +110,11 @@ body{
     max-width: 50%;
 }
 
-.banner-btn, .banner-btn-2{
+.banner-btns{
+    margin-top: 28px;
+}
+
+.banner-btn, .banner-btn-2, .btn-3{
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 42px;
@@ -170,11 +180,158 @@ body{
     font-size: 2.5rem;
 }
 
+/* Habits section related styles */
+.habits{
+    text-align: center;
+}
+
+.habits > p{
+    margin-bottom: 58px;
+}
+
+.habit-content{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.content > img{
+    border-radius: 50%;
+}
+
+.section-title{
+    font-size: 3rem;
+}
+
+/* Extra-Achievement Section */
+.extra-achievement{
+    background-color: #222222;
+    border-radius: 18px;
+    align-items: center;
+    gap: 164px;
+    padding: 30px;
+}
+
+.A-img{
+    width: 100%;
+    border-radius: 18px;
+}
+
+.btn-3{
+    margin-top: 34px;
+    padding: 16px 70px;
+    border: none;
+}
+
+/* BMI Chart section */
+table, th, td{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-collapse: collapse;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* BMI calc related styles */
+.bmi-calculator{
+    background-color: #222222;
+    justify-content: center;
+}
+
+.bmi-calc{
+    max-width: 577px;
+}
+
+.bmi-container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+input, .selector-1, .selector-2{
+    display: inline-block;
+    height: 48px;
+    width: 282.5px;
+    border: none;
+    border-radius: 10px;
+    gap: 12px;
+    padding: 13px 20px;
+}
+
+input, .selector-1, .selector-2{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Trainer related styles */
+.team{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.team-head-content{
+    text-align: center;
+    margin-top: 88px;
+    margin-bottom: 58px;
+}
+
+.trainer{
+    position: relative;
+}
+
+.trainers-content{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+}
+
+.trainer-img{
+    width: 100%;
+    height: 272px;
+    border: none;
+    border-radius: 18px;
+}
+
+.trainer-text{
+    position: absolute;
+    bottom: 0;
+}
+
+/* Footer related styles */
+footer{
+    margin-top: 88px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-content{
+    padding: 66px 190px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 102px;
+    align-items: center;
+}
+
+.footer-title{
+    font-size: 4.4rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.footer-links{
+    margin-left: 152px;
+}
+
+hr{
+    width: 72%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-end{
+    padding: 35px;
+    text-align: center;
+}
 
 /* media queries related styles for small devices */
 @media screen and (max-width: 576px) 
 {
-    header{
+    header, main{
         margin: 0 20px
     }
 
@@ -186,7 +343,7 @@ body{
         font-size: 2.25rem;
         visibility: visible;
     }
-    .banner{
+    .banner, .extra-achievement{
         flex-direction: column;
         align-items: center;
     }
@@ -214,4 +371,58 @@ body{
         bottom: 33rem;
         padding: 12px 18px;
     }
+
+    /* habit section */
+    .habits, .section-title{
+        margin-top: 0;
+    }
+    .habits{
+        margin: 0 28 0 28;
+    }
+     .habit-content{
+        grid-template-columns: 1fr;
+     }
+
+     /* Extra Achievement Section */
+    .extra-achievement{
+        gap: 30px;
+    } 
+     .btn-position{
+        text-align: center;
+     }
+
+     .A-img{
+        max-width: 100%;
+     }
+     
+     .btn-3{
+        margin-top: 24px;
+        padding: 16px 103px;
+     }
+
+     /* Trainer Section related styles */
+     .trainers-content{
+        grid-template-columns: 1fr;
+     }
+     .team-head-content{
+        margin-top: 66px;
+        margin-bottom: 37px;
+     }
+     .trainer-img{
+        width: 100%;
+        height: auto;
+     }
+
+     /* Footer-related-styles */
+     .footer-content{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 44px 20px;
+     }
+     .footer-links{
+        margin-left: 0;
+     }
+     hr{
+        width: 94%;
+     }
 }
