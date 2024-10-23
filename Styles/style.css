@@ -487,13 +487,13 @@ hr{
 
      /* BMI Calculator-Section */
      .bmi-table{
-        padding: 45px;
+        margin: 0 auto;
      }
 
      .bmi-container {
         text-align: center;
         flex-direction: column;
-        padding: 5px; 
+        padding: 0px; 
     }
 
     form {
@@ -503,7 +503,8 @@ hr{
     }
 
     form > input, select {
-        width: 25%;   
+        width: 28%;
+        padding: 25px;   
     }
 
     .btn-3 {
