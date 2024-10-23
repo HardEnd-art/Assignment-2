@@ -94,6 +94,7 @@ body{
     font-size: 1.2rem;
     font-weight: 500;
     padding: 8px 20px;
+    border: none;
     border-radius: 46px;
 }
 
@@ -334,6 +335,71 @@ hr{
     text-align: center;
 }
 
+/* Pricing-Section */
+.pricing{
+    background-color: rgba(34, 34, 34, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.pricing-title{
+    text-align: center;
+}
+
+.toggle-btns{
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.toggle-btn, .toggle-btn-2{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 18px;
+}
+
+.toggle-btn-2{
+    background-color: #222222;
+}
+
+.plan-container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.discover, .professional{
+    background-color: rgba(34, 34, 34, 0.5);
+    text-align: left;
+}
+
+.enterprise{
+    background-color: #E6533C;
+}
+
+.discover, .professional, .enterprise{
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.plan-feature{
+    list-style: none;
+    padding: 0;
+}
+
+.plan-feature > li{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.checkout-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
 /* media queries related styles for small devices */
 @media screen and (max-width: 576px) 
 {
@@ -458,6 +524,11 @@ hr{
      .trainer-img{
         width: 100%;
         height: auto;
+     }
+
+     /* Pricing-Related Styles */
+     .plan-container{
+        grid-template-columns: 1fr;
      }
 
      /* Footer-related-styles */
